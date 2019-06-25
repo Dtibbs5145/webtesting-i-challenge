@@ -1,0 +1,16 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "description": "Testing I March 4, 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --verbose"
+  },
+  "repository": "https://github.com/Dtibbs5145/webtesting-i-challenge.git",
+  "author": "Destiny Tibbitts <dtibbs5145@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
