@@ -10,10 +10,23 @@ describe('enhancer.js', () => {
         });
     });
     describe('succeed()', () => {
-        it('')
-    })
+        it('enhancement success', () => {
+            expect(succeed({ enhancement: 10 }).enhancement).toBeLessThanOrEqual(20)
+            expect(succeed({ enhancement: 20 }).enhancement).toBeLessThanOrEqual(20)
+            expect(succeed({ enhancement: 13 }).enhancement).toBeLessThanOrEqual(20)
+            expect(succeed({ enhancement: 19 }).enhancement).toBeLessThanOrEqual(20)
+            expect(succeed({ enhancement: 0 }).enhancement).toBeLessThanOrEqual(20)
+        });
+    });
+    describe(`fail()`, () => {
+        it('enhancement failure', () => {
+            expect(fail({ durability: 25 }).durability).toBeLessThanOrEqual(100);
+            expect(fail({ durability: 19 }).durability).toBeLessThanOrEqual(100);
+            expect(fail({ durability: 93 }).durability).toBeLessThanOrEqual(100);
+            expect(fail({ durability: 7 }).durability).toBeLessThanOrEqual(100);
+        });
+    });
 
 
-
-})
+});
 // test away!
